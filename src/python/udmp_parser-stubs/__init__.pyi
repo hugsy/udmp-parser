@@ -256,7 +256,7 @@ class ThreadEntry:
     ThreadContext: LocationDescriptor32
 
 
-class Thread_t:
+class Thread:
     ThreadId: int
     SuspendCount: int
     PriorityClass: int
@@ -364,7 +364,7 @@ class UserDumpParser:
 
     def Memory(self) -> dict[int, udmp_parser.MemBlock]: ...
 
-    def Modules(self) -> dict[int, udmp_parser.Modules]:
+    def Modules(self) -> dict[int, udmp_parser.Module]:
         """
         Get the minidump modules
         """
