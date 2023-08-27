@@ -157,7 +157,9 @@ void udmp_parser_utils_module(nb::module_ &m) {
           return false;
         }
 
+        const auto a0 = nb::str(nb::handle(argv[0]));
         if (argv.size() != 3) {
+          nb::print(nb::str("Syntax\n\t{} PID OutputDumpFile.dmp").format(a0));
           return false;
         }
 
